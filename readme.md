@@ -14,6 +14,6 @@ Hmm, let me try and clear this up. If you chuck some yaml in your workflow that 
 ```
 Then I will go and update your service with a new docker image for you. That easy.
 
-What about environment't variables you ask? I'll just copy it over for you and assume you manage that some other way.
+What about environment variables you ask? I'll just copy it over for you and assume you manage that some other way.
 
 I also play nice with [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
