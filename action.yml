@@ -1,0 +1,20 @@
+name: 'deploy to ecs'
+description: 'Updates a running ecs service with new code, copying env from the previous build.'
+inputs:
+  cluster:
+    description: ECS cluster name the service is deployed into
+    required: false
+    default: 'default'
+  service:
+    description: Name of th ECS service that needs to be updated
+    required: true
+  image-overrides:
+    description: "A string in the format 'container-name=new-image-name:234'. You can specify multiple by separating with commas."
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cluster }}
+    - ${{ inputs.service }}
+    - ${{ inputs.image-overrides }}
