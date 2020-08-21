@@ -10,7 +10,7 @@ Hmm, let me try and clear this up. If you chuck some yaml in your workflow that 
         with:
           cluster: default
           service: YourServiceName
-          image-overrides: YourContainerName=111111111111.dkr.ecr.ap-southeast-2.amazonaws.com/Repo/YourImageName:${{ env.GITHUB_RUN_NUMBER }}
+          image-overrides: YourContainerName=111111111111.dkr.ecr.ap-southeast-2.amazonaws.com/Repo/YourImageName:${{ github.run_number }}
 ```
 Then I will go and update your service with a new docker image for you. That easy.
 
